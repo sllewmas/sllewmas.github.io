@@ -188,7 +188,7 @@ padding: 0;}
 .reveal table th,
 .reveal table td {
   text-align: left;
-  padding: 0em;
+  padding: 0.1em;
   border-bottom: 0px solid; }
 
 .reveal table th[align="center"],
