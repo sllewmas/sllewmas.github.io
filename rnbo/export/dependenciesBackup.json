@@ -1,0 +1,14 @@
+[
+    {
+        "id": "harp_riff",
+        "file": "media/harp_riff.wav"
+    },
+    {
+        "id": "jongly",
+        "file": "media/jongly.wav"
+    },
+    {
+        "id": "big",
+        "file": "media/big.wav"
+    }
+]
