@@ -265,40 +265,6 @@ function attachOutports(device) {
     });
 }
 
-// function attachOutports(device) {
-//     const outports = device.messages.filter(message => message.type === RNBO.MessagePortType.Outport);
-//     if (outports.length < 1) {
-//         document.getElementById("rnbo-console").removeChild(document.getElementById("rnbo-console-div"));
-//         return;
-//     }
-
-//     document.getElementById("rnbo-console").removeChild(document.getElementById("no-outports-label"));
-//     device.messageEvent.subscribe((ev) => {
-
-//         // Message events have a tag as well as a payload
-//         console.log(`${ev.tag}: ${ev.payload}`);
-
-//         document.getElementById("rnbo-console-readout").innerText = `${ev.tag}: ${ev.payload}`;
-//     });
-// }
-
-// function loadPresets(device, patcher) {
-//     let presets = patcher.presets || [];
-//     if (presets.length < 1) {
-//         document.getElementById("rnbo-presets").removeChild(document.getElementById("preset-select"));
-//         return;
-//     }
-
-//     document.getElementById("rnbo-presets").removeChild(document.getElementById("no-presets-label"));
-//     let presetSelect = document.getElementById("preset-select");
-//     presets.forEach((preset, index) => {
-//         const option = document.createElement("option");
-//         option.innerText = preset.name;
-//         option.value = index;
-//         presetSelect.appendChild(option);
-//     });
-//     presetSelect.onchange = () => device.setPreset(presets[presetSelect.value]);
-// }
 
 /**
  * 
@@ -330,15 +296,10 @@ function loadPresets(device, patcher) {
 function setupMIDI(device) {
     navigator.requestMIDIAccess()
         .then(onMIDISuccess, onMIDIFailure);
-
-
-
 };
 
 function onMIDISuccess(midiAccess) {
     //console.log(midiAccess);
-
-
 
     var inputs = midiAccess.inputs;
 
@@ -346,12 +307,6 @@ function onMIDISuccess(midiAccess) {
 
 
     for (var input of midiAccess.inputs.values()) {
-        // console.log(input.name)
-        // var opt = input.name;
-        // var el = document.createElement("option");
-        // el.textContent = opt;
-        // el.value = opt;
-        // select.appendChild(el);
         input.onmidimessage = getMIDIMessage;
     }
 
@@ -362,7 +317,6 @@ function onMIDISuccess(midiAccess) {
  */
 function getMIDIMessage(midiMessage) {
     let midiPort = 0;
-    //console.log(midiMessage.data)
     let me = new RNBO.MIDIEvent(device.context.currentTime, midiPort, midiMessage.data);
     device.scheduleEvent(me);
 
@@ -488,17 +442,12 @@ function keyboard(device) {
             return;
         }
 
-        //const freq = getHz(keys[key].note, (keys[key].octaveOffset || 0) + 3);
-
-        // if (Number.isFinite(freq)) {
-        //     osc.frequency.value = freq;
-        // }
         console.log(keys[key].note)
         keys[key].element.classList.add("pressed");
         pressedNotes.set(key, keys[key].note);
         let me = new RNBO.MIDIEvent(device.context.currentTime, midiPort, [144, keys[key].note, 80]);
         device.scheduleEvent(me);
-        //pressedNotes.get(key).start();
+
     };
 
     const stopKey = (key) => {
