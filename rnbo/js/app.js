@@ -1,3 +1,5 @@
+// import { Pureknob } from 'pureknob/pureknob.js';
+
 var device;
 async function setup() {
     // Create AudioContext
@@ -200,7 +202,7 @@ function makeBufferSelector(device) {
     const buffSelect = document.getElementById("buff-select");
     // const buffRadio = document.getElementById("buff-radio");
     const buffForm = document.getElementById("buff-form");
-    let inportTag = null;
+    // let inportTag = null;
 
     const messages = device.messages;
     const inports = messages.filter(message => message.type === RNBO.MessagePortType.Inport);
@@ -294,8 +296,12 @@ function loadPresets(device, patcher) {
 }
 
 function setupMIDI(device) {
-    navigator.requestMIDIAccess()
-        .then(onMIDISuccess, onMIDIFailure);
+    try {
+        navigator.requestMIDIAccess()
+            .then(onMIDISuccess, onMIDIFailure);
+    } catch { }
+
+
 };
 
 function onMIDISuccess(midiAccess) {

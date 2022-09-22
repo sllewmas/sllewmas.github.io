@@ -107,7 +107,7 @@ textarea {
 
 .white {
     height: 12.5rem;
-    width: 3.5rem;
+    width: 9%;
     z-index: 1;
     border-left: 1px solid hsl(0, 0%, 73%);
     border-bottom: 1px solid hsl(0, 0%, 73%);
@@ -120,7 +120,7 @@ textarea {
 
 .black {
     height: 8rem;
-    width: 2rem;
+    width: 4.5%;
     margin: 0 0 0 -1rem;
     z-index: 2;
     border: 1px solid black;
@@ -156,7 +156,7 @@ textarea {
 
 #keyboard {
     height: 15.25rem;
-    width: 41rem;
+    width: 100%;
     margin: 0.5rem auto;
     padding: 3rem 0 0 3rem;
     position: relative;
