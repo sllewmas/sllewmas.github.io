@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <meta name="rnbo-version" content="0.18.0-dev.12">
+    <meta name="rnbo-version" content="0.17.1">
     <link rel="stylesheet" href="style/style.css">
     <title>RNBO Granular Web Synth</title>
 </head>
@@ -17,11 +17,12 @@
     <div id="rnbo-root">
         <div>
             <h1 id="patcher-title">RNBO Granular Web Synth</h1>
+            <h2><a href="https://sllewm.as" target="_new">Sam Wells</a></h2>
         </div>
 
         <div id="rnbo-clickable-keyboard">
             <h2>MIDI Input</h2>
-            <em id="no-midi-label">Use attached MIDI devices or the keyboard below</em>
+            <em id="no-midi-label">Use the keyboard below or (if you are using Google Chrome) attached MIDI devices</em>
             <ul id="keyboard">
                 <li note="C" class="white">A</li>
                 <li note="C#" class="black">W</li>
@@ -62,14 +63,29 @@
             <h2>Parameters</h2>
             <em id="no-param-label">No parameters</em>
         </div>
-
+        <h3>
+            Credits and Thanks
+        </h3>
+        <ul>
+            <li><a href="https://css-tricks.com/how-to-code-a-playable-synth-keyboard/" target="_new">Bret Cameron's
+                    playable synth keyboard</a>
+            </li>
+            <li><a href="https://github.com/esonderegger/web-audio-peak-meter" target="_new">Evan Sondregger's
+                    Web Audio Peak Meter</a>
+            </li>
+            <li><a href="http://john-gibson.com/" target="_new">Inspiration from John Gibson's jg.granulate Max
+                    external</a>
+            </li>
+        </ul>
     </div>
+
+
 
     <script src="https://assets.rpy.xyz/web-audio-peak-meter.min.js"></script>
     </script>
     <!-- Load the script that creates the RNBO device  -->
     <script type="text/javascript"
-        src="https://c74-public.nyc3.digitaloceanspaces.com/rnbo/0.17.0/rnbo.min.js"></script>
+        src="https://c74-public.nyc3.digitaloceanspaces.com/rnbo/0.17.1/rnbo.min.js"></script>
 
 
 

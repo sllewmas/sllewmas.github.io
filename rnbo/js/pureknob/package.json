@@ -3,8 +3,7 @@
 	"version": "1.0.0",
 	"description": "Initially a (circular) knob / dial control with mouse, wheel, touch and keyboard support, implemented in pure JavaScript.",
 	"main": "pureknob.js",
-	"type": "module";
-
+	"type": "module",
 	"directories": {
 		"doc": "doc"
 	},

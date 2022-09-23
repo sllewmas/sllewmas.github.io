@@ -14,7 +14,7 @@ async function setup() {
 
 
     // Fetch the exported patcher
-    const response = await fetch("export/granular-synth_v4.1.rnbopat.export.json");
+    const response = await fetch("export/granular-synth_v4.2.rnbopat.export.json");
     const patcher = await response.json();
 
     // (Optional) Fetch the dependencies
@@ -178,9 +178,11 @@ function makeSliders(device) {
 
     // Listen to parameter changes from the device
     device.parameterChangeEvent.subscribe(param => {
-        if (!isDraggingSlider)
-            uiElements[param.name].slider.value = param.value;
-        uiElements[param.name].text.value = param.value.toFixed(1);
+        try {
+            if (!isDraggingSlider)
+                uiElements[param.name].slider.value = param.value;
+            uiElements[param.name].text.value = param.value.toFixed(1);
+        } catch { }
     });
 
     // device.messageEvent.subscribe((ev) => {

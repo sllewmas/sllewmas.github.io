@@ -6,6 +6,12 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #dddddd;
     background-color: #222222;
+    margin-bottom: 5em;
+
+}
+
+a {
+    color: orange;
 }
 
 #rnbo-root {
@@ -157,11 +163,11 @@ textarea {
 #keyboard {
     height: 15.25rem;
     width: 100%;
-    margin: 0.5rem auto;
-    padding: 3rem 0 0 3rem;
+    margin: 1% auto;
+    padding: 3% 0 0 3%;
     position: relative;
     border: 1px solid var(--keyboard-border);
-    border-radius: 1rem;
+    border-radius: 3%;
     background-color: var(--keyboard);
     box-shadow: 0 0 50px var(--black-50) inset, 0 1px var(--keyboard-shadow) inset,
         0 5px 15px var(--black-50);
