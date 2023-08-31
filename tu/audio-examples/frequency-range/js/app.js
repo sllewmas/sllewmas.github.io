@@ -1,5 +1,5 @@
 async function setup() {
-    const patchExportURL = "export/patch.export.json";
+    const patchExportURL = "export/freq-range.json";
 
     // Create AudioContext
     const WAContext = window.AudioContext || window.webkitAudioContext;
