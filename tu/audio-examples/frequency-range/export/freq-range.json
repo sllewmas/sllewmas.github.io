@@ -41,7 +41,7 @@
         "isEnum": false,
         "enumValues": [],
         "displayName": "",
-        "unit": "dB",
+        "unit": "dBFS",
         "order": 0,
         "displayorder": "-",
         "sendinit": true,

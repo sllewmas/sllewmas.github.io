@@ -171,7 +171,7 @@ function makeSliders(device) {
         slider.addEventListener("pointerup", () => {
             isDraggingSlider = false;
             slider.value = param.value;
-            text.value = param.value.toFixed(1);
+            text.value = param.value.toFixed(1) + ` ${param.unit}`;
         });
         slider.addEventListener("input", () => {
             let value = Number.parseFloat(slider.value);
